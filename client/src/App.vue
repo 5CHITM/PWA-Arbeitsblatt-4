@@ -5,6 +5,7 @@
     <h1>Hey</h1>
     <ButtonGet @get="fetchData"></ButtonGet>
     <CardView :employees="employees" @del="delEmployee"></CardView>
+    <button class="btn btn-primary" @click="subscribe">Subscribe</button>
   </div>
 </template>
 
@@ -61,6 +62,31 @@ export default {
       if (confirm(`New content is available!. Click OK to refresh`)) {
         window.location.reload();
       }
+    },
+
+    async subscribe() {
+      if (!('serviceWorker' in navigator)) {
+        console.log('no service worker!');
+        return;
+      }
+      const publicVapidKey = 'BC6ShlsYI5aJYDRCGxIAWzKGaoZeEA3Oy4Mj7K5Z-ycuSkVEPvf3Q4PShKGswo8s4vwt9JCvxXA63sb6MRC9foA';
+      const registration = await navigator.serviceWorker.ready;
+      const subscription = await registration.pushManager.subscribe({
+        userVisibleOnly: true,
+        applicationServerKey: this.urlBase64ToUint8Array(publicVapidKey),
+      });
+      await axios.post('/subscribe', subscription);
+    },
+
+    urlBase64ToUint8Array(base64String) {
+      const padding = '='.repeat((4 - (base64String.length % 4)) % 4);
+      const base64 = (base64String + padding).replace(/-/g, '+').replace(/_/g, '/');
+      const rawData = window.atob(base64);
+      const outputArray = new Uint8Array(rawData.length);
+      for (let i = 0; i < rawData.length; ++i) {
+        outputArray[i] = rawData.charCodeAt(i);
+      }
+      return outputArray;
     },
   },
 };

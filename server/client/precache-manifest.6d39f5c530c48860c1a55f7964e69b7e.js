@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "42cb56da110090f84ada",
+    "revision": "e99844c7ad195b2a792f",
     "url": "/css/app.583339f3.css"
   },
   {
-    "revision": "754547e2285832094e2b",
+    "revision": "98a4c96a0a00cc3e8d4b",
     "url": "/css/chunk-vendors.5d3035bc.css"
   },
   {
@@ -88,16 +88,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/images/icons/safari-pinned-tab.svg"
   },
   {
-    "revision": "44d966b2cb1e3078cc39be79145ff057",
+    "revision": "88ed9cc4520ead3ea88556aea0d0a08a",
     "url": "/index.html"
   },
   {
-    "revision": "42cb56da110090f84ada",
-    "url": "/js/app.857ed13a.js"
+    "revision": "e99844c7ad195b2a792f",
+    "url": "/js/app.c39ef346.js"
   },
   {
-    "revision": "754547e2285832094e2b",
-    "url": "/js/chunk-vendors.a72f7e98.js"
+    "revision": "98a4c96a0a00cc3e8d4b",
+    "url": "/js/chunk-vendors.b16becc8.js"
   },
   {
     "revision": "f5f4e3b7714f27fc71f2b674ede66cd1",
@@ -108,7 +108,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/robots.txt"
   },
   {
-    "revision": "c9fd48a362f1f992526df27c4e38836e",
+    "revision": "bacf362ac8c5be028567f83ec73887ab",
     "url": "/service-worker.js"
   }
 ]);
