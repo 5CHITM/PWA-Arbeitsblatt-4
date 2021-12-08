@@ -1,4 +1,4 @@
-post http://127.0.0.1:3000/notify
+post https://lang-pwa4.herokuapp.com/notify
 Content-Type: application/json
 
 {
