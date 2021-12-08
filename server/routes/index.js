@@ -41,6 +41,7 @@ router.post('/notify', (req) => {
 });
 
 router.get('/send?', (req) => {
+  console.log(req.query);
   const payload = JSON.stringify({ title: 'New Message', body: req.query.msg });
   for (const sub of subscription) {
     try {
