@@ -1,6 +1,0 @@
-post https://lang-pwa4.herokuapp.com/notify
-Content-Type: application/json
-
-{
-    "message": "Hello, you are notified via push"
-}
