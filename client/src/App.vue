@@ -4,7 +4,7 @@
     <div class="alert alert-danger" role="alert" v-if="offline">Du bist offline...</div>
     <h1>Hey</h1>
     <ButtonGet @get="fetchData"></ButtonGet>
-    <CardView :employees="employees" @del="delEmployee"></CardView>
+    <CardView :employees="employees" :offline="offline" @del="delEmployee"></CardView>
     <button class="btn btn-primary" @click="subscribe">Subscribe</button>
   </div>
 </template>
