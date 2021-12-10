@@ -23,6 +23,7 @@ export default {
   data: () => ({
     serverAddress: process.env.VUE_APP_SERVER,
   }),
+
   props: {
     employees: {
       type: Array,
